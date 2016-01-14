@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Create a hash
+ * Create a hash 
  * @param string $string
  * @return string
  */

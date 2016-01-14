@@ -8,7 +8,7 @@ class User {
         return 'Logging in with a vengeange ...';
     }
 
-    public funtion logout(){
+    public function logout(){
         return 'Logging out ...';
 
     }

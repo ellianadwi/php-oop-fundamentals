@@ -20,4 +20,4 @@ class Member extends user {
         return $message . ' ... Set a flag in the online members table';
     }
 
-}}
+}

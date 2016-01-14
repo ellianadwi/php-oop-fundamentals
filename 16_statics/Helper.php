@@ -5,6 +5,7 @@
  * @param string $tring
  * @return string
  */
-function getHash($string{
+function getHash($string)
+{
     return hash('sha256', $string);
-})
+}

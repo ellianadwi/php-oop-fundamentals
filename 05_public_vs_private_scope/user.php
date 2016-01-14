@@ -30,16 +30,15 @@ class User {
 
     public function setEmail($string)
     {
-        if (! filter_var($string,FILTER_VALIDATE_EMAIL)){
+        if (!filter_var($string, FILTER_VALIDATE_EMAIL)){
             throw  new Exception('Please provide a valid email.');
         }
-
         $this->email = $string;
     }
 
     public function getEmail()
     {
-        return $this->email
+        return $this->email;
     }
 
     private function validatePassword ($string)

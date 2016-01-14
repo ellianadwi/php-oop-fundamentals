@@ -4,7 +4,7 @@ class User {
     /**
      * @var string
      */
-    private $email
+    private $email;
 
     /**
      * @var string

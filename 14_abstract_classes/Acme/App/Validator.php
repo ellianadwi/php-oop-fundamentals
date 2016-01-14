@@ -39,7 +39,7 @@ class Validator
                 // validateEmail($item, $value, $param)
                 $methodname = 'validate' . ucfirst($rule);
                 $value = isset($data[$item]) ? $data[$item] : NULL;
-                if (method_exists($this, $methodname)) {
+                if (method_exists($this, $methodName)) {
                     $this->$methodName($item,$value, $parameter) OR $valid = false;
                 }
 

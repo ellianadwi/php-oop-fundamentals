@@ -47,14 +47,13 @@ class User {
 
         // Do not set if not fillable
         if (! in_array($name, $this->fillable)) {
-            return false
+            return false;
         }
 
         if (isset($this->$name)) {
             $this->$name = $value;
         }
     }
-
     /**
      * Directly get inaccessible but existing properties, if in $this->accesible array
      * @param string $name
@@ -91,14 +90,6 @@ class User {
      * @return string
      */
     public  function login(){
-        return 'Logging in with a vengeange ...';
-    }
-
-    /**
-     * Log in a user
-     * @return string
-     */
-    public function login(){
         return 'Logging in with a vengeange ...';
     }
 

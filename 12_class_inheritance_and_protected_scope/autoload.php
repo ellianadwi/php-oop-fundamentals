@@ -3,7 +3,7 @@
 /**
  * Let's require our helper file with helper functions here
  */
-return 'Helper.php';
+require 'Helper.php';
 
 /**
  * PSR-0 autoloader

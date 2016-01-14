@@ -3,27 +3,27 @@
 namespace Acme\App;
 
 /**
- * this class extends Acme\App\user
+ * This class extends Acme\App\User
  */
 class Administrator extends User {
 
-    public function __construct(){
-        $this->isAdmin = true;
+    public function __construct() {
+        $this->isAdmin = true;        
     }
-
+    
     /**
      * Log in a user
      * @return string
      */
     public function login(){
-
-        //Login in our member using the logic in the parent class.
+        
+        // Login in our member using the logic in the parent class.
         $message = parent::login();
-
-        //add some administrator-spcific logic
-        return $message . ' ... Log yhis action in an administrator\'s table';
+        
+        // Add some administrator-spcific logic
+        return $message . ' ... Log this action in an administrator\'s table';
     }
-
+    
     /**
      * This method is for Administrators only
      */
@@ -31,4 +31,5 @@ class Administrator extends User {
     {
         // Do stuff ...
     }
+    
 }

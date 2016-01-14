@@ -21,7 +21,7 @@ class Validator
 
         foreach ($rules as $item => $ruleset) {
             // required|email|min:8
-            $ruleset = explode('|', $reluset);
+            $ruleset = explode('|', $ruleset);
 
             foreach ($ruleset as $rule) {
 

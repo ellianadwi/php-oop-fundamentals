@@ -3,7 +3,7 @@
 // Require app files
 require 'App/Helper.php';
 require 'App/User.php';
-require 'App/Validator,php';
+require 'App/Validator.php';
 require 'Library/User.php';
 
 // Set data and validation rules

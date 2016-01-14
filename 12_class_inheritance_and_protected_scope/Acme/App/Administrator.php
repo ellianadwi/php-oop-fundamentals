@@ -7,20 +7,20 @@ namespace Acme\App;
  */
 class Administrator extends User {
 
-    public function __construct(){
-        $this->isAdmin = true;
+    public function __construct() {
+        $this->isAdmin = true;        
     }
-
+    
     /**
      * Return the result of the login()
      */
-    public function getLogin()
+    public function getLogin ()
     {
-        //the login method in the parent class is accessible from here,
-        //because it is protected.
+        // The login method in the parent class is accessible from here, 
+        // because it is protected.
         return $this->login();
     }
-
+    
     /**
      * This method is for Administrators only
      */
@@ -28,5 +28,5 @@ class Administrator extends User {
     {
         // Do stuff ...
     }
-
+    
 }

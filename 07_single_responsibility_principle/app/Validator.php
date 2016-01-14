@@ -3,37 +3,38 @@
 class Validator
 {
     /**
-     * Validator errors
+     * Validation errors
      * @var array
      */
     private $errors = array();
 
     /**
-     * validate data againt a set of rules and set errors in the $this->errors
+     * validate data against a set of rules and set errors in the $this->errors
      * array
      * @param array $data
      * @param array $rules
      * @return boolean
      */
-    public function validate (Array $data,Array $rules)
+    public function validate (Array $data, Array $rules)
     {
         $valid = true;
 
         foreach ($rules as $item => $ruleset) {
             // required|email|min:8
-            $releset = explode('|', $ruleset);
+            $ruleset = explode('|', $ruleset);
 
             foreach ($ruleset as $rule) {
 
                 $pos = strpos($rule, ':');
                 if ($pos !== false) {
-                    $parameter = substr($rule, 0, $pos);
+                    $parameter = substr($rule, $pos + 1);
+                    $rule = substr($rule, 0, $pos);
                 }
                 else {
                     $parameter = '';
                 }
 
-                // valisateEmail($item, $value, $param)
+                // validateEmail($item, $value, $param)
                 $methodName = 'validate' . ucfirst($rule);
                 $value = isset($data[$item]) ? $data[$item] : NULL;
                 if (method_exists($this, $methodName)){

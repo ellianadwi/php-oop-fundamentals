@@ -1,10 +1,10 @@
 <?php
 
-//require psr-0 autoloader
+// Require psr-0 autoloader
 require 'autoload.php';
 
-//Work with the RSS implementation of PstRepositoryInterface
-$postRepository = new Acme\App\Repositories\PostRssRepoository();
+// Work with the RSS implementation of PostRepositoryInterface
+$postRepository = new Acme\App\Repositories\PostRssRepository();
 $posts = $postRepository->All();
 echo '<ul>';
 foreach ($posts as $post) {
@@ -17,7 +17,7 @@ echo '<h1>' . $post->title . '</h1>';
 echo '<p>' . $post->body . '</p>';
 
 // Work with the json implementation of PostRepositoryInterface
-$postRepository = new Acme\App\Repositories\PostRepository();
+$postRepository = new Acme\App\Repositories\PostJsonRepository();
 $posts = $postRepository->All();
 echo '<ul>';
 foreach ($posts as $post) {

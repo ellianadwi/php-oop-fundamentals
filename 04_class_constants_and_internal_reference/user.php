@@ -21,4 +21,4 @@ class User {
         }
         $this->password = hash('sha256', $string);
     }
-}}
+}
