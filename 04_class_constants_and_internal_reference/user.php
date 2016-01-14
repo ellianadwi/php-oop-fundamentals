@@ -1,10 +1,16 @@
 <?php
+
+//membuat class User
 class User {
 
+// membuat public property
     public $email;
     public $password;
+
+//membuat konstanta
     const MINCHARS = 8;
 
+//membuat public method
     public function login(){
         return 'Logging in with a vengeange ...';
     }
